@@ -29,6 +29,7 @@ import ScreenHeader from './src/components/ScreenHeader';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from './src/screens/home';
 import LoginScreen from './src/screens/login';
@@ -38,6 +39,7 @@ import FlashMessage, { showMessage } from "react-native-flash-message";
 
 const Stack = createStackNavigator();
 
+const BottomTab = createBottomTabNavigator();
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,7 +48,8 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const [passwordContext, setPasswordContext] = useState('')
+  const [passwordContext, setPasswordContext] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
 

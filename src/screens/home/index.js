@@ -55,6 +55,16 @@ export default function HomeScreen({ navigation }) {
                                         <Text style={styles.dashboardItemsHeading}>CyberSec </Text>
                                 </View>
 
+                                {/* <View style={styles.dashboardWrapperItem}>
+                                        <Image source={iotIcon} style={{ height: 33, width: 33 }} />
+                                        <Text style={styles.dashboardItemsHeading}>Settings</Text>
+                                </View>
+
+                                <View style={styles.dashboardWrapperItem}>
+                                        <Image source={cyberSecurityIcon} style={{ height: 33, width: 33 }} />
+                                        <Text style={styles.dashboardItemsHeading}>Logout </Text>
+                                </View> */}
+
 
                         </View>
                         {/* <Text style={{ fontSize: 20 }}> Value of Password from Context {passwordContext} </Text> */}

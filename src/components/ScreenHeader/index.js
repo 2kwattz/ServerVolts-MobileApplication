@@ -9,11 +9,11 @@ const ScreenHeader = ({ title, navigation }) => {
     return (
       <View style={styles.headerContainer}>
   
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        {title !== 'Dashboard' && <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
          <Image source={arrowLeft} style={{height: 24, width: 24}}/>
-        </TouchableOpacity>
+        </TouchableOpacity> }
 
-        <Text style={styles.title}>{title}</Text>
+        <Text style={[styles.title,title === 'Dashboard'&& {width:"100%", textAlign: "center"}]}>{title}</Text>
 
         <View>
             
