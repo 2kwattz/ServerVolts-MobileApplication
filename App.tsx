@@ -55,7 +55,7 @@ function App(): React.JSX.Element {
     <AppContext.Provider value={{passwordContext,setPasswordContext}}>
 
      <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" >
+      <Stack.Navigator initialRouteName="Login" >
         <Stack.Screen  options={{
             header: ({ navigation }) => <ScreenHeader title="Dashboard" navigation={navigation} />,
           }} name="Home" component={HomeScreen}/>
